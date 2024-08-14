@@ -1,0 +1,102 @@
+<div class="main p-5">
+    <div class="tile-container grid grid-cols-2 gap-5 mb-5">
+      <div class="tile bg-[#DC4C64] text-white p-5 rounded-lg text-center">
+        <div class="tile-title text-xl mb-2">Non-Resourced Total</div>
+        <div class="tile-number text-3xl font-bold">23</div>
+      </div>
+      <div class="tile bg-[#14A44D] text-white p-5 rounded-lg text-center">
+        <div class="tile-title text-xl mb-2">Resourced Total</div>
+        <div class="tile-number text-3xl font-bold">76</div>
+      </div>
+    </div>
+  
+    <div class="search-box flex mb-5 gap-2">
+      <input type="text" placeholder="Search" class="w-48 p-2 border border-gray-300 rounded">
+    </div>
+  
+    <table class="w-full border-collapse bg-white text-sm">
+        <thead>
+          <tr class="bg-gray-200">
+            <th class="p-2 border border-gray-300">Decision Reached?</th>
+            <th class="p-2 border border-gray-300">Topic</th>
+            <th class="p-2 border border-gray-300">Program Code</th>
+            <th class="p-2 border border-gray-300">Category</th>
+            <th class="p-2 border border-gray-300">Timing Criticality</th>
+            <th class="p-2 border border-gray-300">DM</th>
+            <th class="p-2 border border-gray-300">SDSA / Stats</th>
+            <th class="p-2 border border-gray-300">Clinical Ops</th>
+            <th class="p-2 border border-gray-300">ClinPharm</th>
+            <th class="p-2 border border-gray-300">Regulatory</th>
+            <th class="p-2 border border-gray-300">OARS & GSSO</th>
+            <th class="p-2 border border-gray-300">Pharm Sci & GCS</th>
+            <th class="p-2 border border-gray-300">D&ED</th>
+            <th class="p-2 border border-gray-300">MW</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of dashboardData">
+            <td class="p-2 border border-gray-300">{{ row.decisionReached }}</td>
+            <td class="p-2 border border-gray-300">{{ row.topic }}</td>
+            <td class="p-2 border border-gray-300">{{ row.programCode }}</td>
+            <td class="p-2 border border-gray-300">{{ row.category }}</td>
+            <td class="p-2 border border-gray-300">{{ row.timingCriticality }}</td>
+            <td class="p-2 border border-gray-300  text-center">
+                <span
+                  class="inline-block w-4 h-4 rounded-full"
+                  [ngClass]="row.dm === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+                ></span>
+              </td>
+              <td class="p-2 border border-gray-300  text-center">
+                <span
+                  class="inline-block w-4 h-4 rounded-full"
+                  [ngClass]="row.sdsaStats === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+                ></span>
+              </td>
+            <td class="p-2 border border-gray-300  text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.clinicalOps === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+            <td class="p-2 border border-gray-300  text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.clinPharm === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+            <td class="p-2 border border-gray-300  text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.regulatory === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.oarsGsso === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.pharmSciGcs === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.ded === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+            <td class="p-2 border border-gray-300 text-center">
+              <span
+                class="inline-block w-4 h-4 rounded-full"
+                [ngClass]="row.mw === 'Yes' ? 'bg-green-500' : 'bg-red-500'"
+              ></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+  </div>
+  
