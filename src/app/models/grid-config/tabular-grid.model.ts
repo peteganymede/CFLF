@@ -11,6 +11,7 @@ export const TabularGridModel: Array<ColDef> = [
     hide: false,
     width: 150,
     minWidth: 150,
+    editable: true,
   },
   {
     headerName: 'Code',
@@ -37,7 +38,6 @@ export const TabularGridModel: Array<ColDef> = [
     width: 100,
     minWidth: 100,
   },
-
 ];
 
 export const TabularGridOptionsModel: GridOptions = {
