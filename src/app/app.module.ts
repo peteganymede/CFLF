@@ -8,6 +8,7 @@ import { AppComponent } from "./app.component";
 import { TopNavComponent} from "./common/top-nav/top-nav.component";
 import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 import { TabularComponent } from "./pages/tabular/tabular.component";
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { TabularComponent } from "./pages/tabular/tabular.component";
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
+    AgGridModule,
 
     HttpClientModule,
     ReactiveFormsModule,

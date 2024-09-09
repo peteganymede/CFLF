@@ -21,9 +21,37 @@
     </select>
   </div>
 
-  <div class="w-screen overflow-hidden">
-    <table class="w-full overflow-auto border-collapse  bg-white text-sm">
-      <thead>
+  <div class="main p-5">
+    <div class="search-box flex gap-3 mb-5">
+      <input type="text" placeholder="Search Proposals" class="p-2 border border-gray-300 rounded">
+      <select class="p-2 border border-gray-300 rounded  w-32">
+        <option>Category</option>
+        <option>Category A</option>
+        <option>Category B</option>
+        <option>Category C</option>
+      </select>
+      <select class="p-2 border border-gray-300 rounded w-32">
+        <option>Status</option>
+        <option>Ongoing</option>
+        <option>Complete</option>
+        <option>Critical</option>
+      </select>
+      <select class="p-2 border border-gray-300 rounded w-32">
+        <option>Criticality</option>
+        <option>High</option>
+        <option>Medium</option>
+        <option>Low</option>
+      </select>
+    </div>
+
+  </div>
+  <ag-grid-angular class="ag-theme-alpine ml-2 mr-5 w-full" [rowData]="tabularData" [gridOptions]="gridOptions"
+    (gridReady)="onGridReady($event)" (rowClicked)="onRowClicked($event)" [columnDefs]="columnDefinitions">
+  </ag-grid-angular>
+
+
+  <!-- <table class="w-full border-collapse bg-white text-sm">
+       <thead>
         <tr class="bg-gray-200">
           <th class="p-2 border border-gray-300"></th>
           <th class="p-2 border border-gray-300">Status</th>
@@ -120,7 +148,4 @@
           <td class="p-2 border border-gray-300">{{ row.risks }}</td>
         </tr>
       </tbody>
-    </table>
-
-  </div>
-</div>
+    </table> -->

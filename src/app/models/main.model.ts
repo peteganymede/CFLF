@@ -308,3 +308,27 @@ export const TabularData: Array<any> = [
     risks: 'Risk E',
   },
 ];
+
+export const SortLists: any = {
+  PhaseSort: {
+    PreClinical: 10,
+    Preclinical: 10,
+    'Phase 1': 20,
+    'Phase I': 20,
+    'Phase 2': 125,
+    'Phase II': 125,
+    'Phase IIED': 128,
+    'Phase IIFD': 130,
+    'Phase 3': 140,
+    'Phase III': 140,
+    Reg: 160,
+    Registration: 160,
+    'Post-Reg': 165,
+    Approved: 270,
+    Approval: 270,
+    Launch: 280,
+    'Phase 4': 290,
+    'Phase IV': 290,
+    'N/A': 999,
+  },
+};

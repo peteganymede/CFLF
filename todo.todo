@@ -1,0 +1,15 @@
+
+Switch grids to AG grid
+
+
+add filter options to summary
+
+add tile summary - heat map, horizontal bar chart
+add status tooltips to dashboard icons
+add filtering to hide columns for data entry
+add grouping for studies by candidate
+add support for time window
+
+add support for force in/force out for studies - admin only
+add admin only button/view - 
+
