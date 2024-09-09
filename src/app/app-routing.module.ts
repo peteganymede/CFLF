@@ -15,7 +15,8 @@ const routes: Routes = [
     component: TabularComponent,
    
   },
-
+  { path: "", redirectTo: "/dashboard", pathMatch: "full" },
+  { path: "**", redirectTo: "/dashboard", pathMatch: "full" },
   
 
 ];

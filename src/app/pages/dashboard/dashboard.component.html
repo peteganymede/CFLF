@@ -13,12 +13,15 @@
     <div class="search-box flex mb-5 gap-2">
       <input type="text" placeholder="Search" class="w-48 p-2 border border-gray-300 rounded">
     </div>
-  
-    <table class="w-full border-collapse bg-white text-sm">
+  </div>
+    <ag-grid-angular class="ag-theme-alpine ml-2 mr-5 w-full" [rowData]="dashboardData" [gridOptions]="gridOptions" 
+    (gridReady)="onGridReady($event)" (rowClicked)="onRowClicked($event)" [columnDefs]="columnDefinitions"> </ag-grid-angular>
+
+<!--     <table class="w-full border-collapse bg-white text-sm">
         <thead>
           <tr class="bg-gray-200">
             <th class="p-2 border border-gray-300">Decision Reached?</th>
-            <th class="p-2 border border-gray-300">Topic</th>
+
             <th class="p-2 border border-gray-300">Program Code</th>
             <th class="p-2 border border-gray-300">Category</th>
             <th class="p-2 border border-gray-300">Timing Criticality</th>
@@ -36,7 +39,7 @@
         <tbody>
           <tr *ngFor="let row of dashboardData">
             <td class="p-2 border border-gray-300">{{ row.decisionReached }}</td>
-            <td class="p-2 border border-gray-300">{{ row.topic }}</td>
+
             <td class="p-2 border border-gray-300">{{ row.programCode }}</td>
             <td class="p-2 border border-gray-300">{{ row.category }}</td>
             <td class="p-2 border border-gray-300">{{ row.timingCriticality }}</td>
@@ -96,7 +99,7 @@
             </td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
       
-  </div>
+ 
   

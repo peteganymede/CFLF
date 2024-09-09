@@ -18,7 +18,7 @@ export const DashboardData: Array<any> = [
         },
         {
             decisionReached: 'No',
-            topic: 'Confirmation of resource availability 1',
+            topic: 'Confirmation of resource availability',
             programCode: 'C5010a (#1020 & #1021)',
             category: 'Internal Medicine',
             timingCriticality: '8/24/2024',
@@ -310,3 +310,28 @@ export const DashboardData: Array<any> = [
           risks: 'Risk E'
         }
       ];
+
+
+      export const SortLists: any = {
+        PhaseSort: {
+          PreClinical: 10,
+          Preclinical: 10,
+          'Phase 1': 20,
+          'Phase I': 20,
+          'Phase 2': 125,
+          'Phase II': 125,
+          'Phase IIED': 128,
+          'Phase IIFD': 130,
+          'Phase 3': 140,
+          'Phase III': 140,
+          Reg: 160,
+          Registration: 160,
+          'Post-Reg': 165,
+          Approved: 270,
+          Approval: 270,
+          Launch: 280,
+          'Phase 4': 290,
+          'Phase IV': 290,
+          'N/A': 999,
+        },
+      }

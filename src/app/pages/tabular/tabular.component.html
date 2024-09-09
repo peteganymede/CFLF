@@ -21,9 +21,14 @@
         <option>Low</option>
       </select>
     </div>
+
+  </div>
+  <ag-grid-angular class="ag-theme-alpine ml-2 mr-5 w-full" [rowData]="tabularData" [gridOptions]="gridOptions" 
+  (gridReady)="onGridReady($event)" (rowClicked)="onRowClicked($event)" [columnDefs]="columnDefinitions"> </ag-grid-angular>
+
   
-    <table class="w-full border-collapse bg-white text-sm">
-      <thead>
+   <!-- <table class="w-full border-collapse bg-white text-sm">
+       <thead>
         <tr class="bg-gray-200">
           <th class="p-2 border border-gray-300"></th>
           <th class="p-2 border border-gray-300">Status</th>
@@ -102,6 +107,6 @@
           <td class="p-2 border border-gray-300">{{ row.risks }}</td>
         </tr>
       </tbody>
-    </table>
-  </div>
+    </table> -->
+
   
